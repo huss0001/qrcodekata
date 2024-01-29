@@ -31,12 +31,8 @@ function generateAllQrCodes() {
 }
 
 function extractWordsAfterAt(url) {
-  // Split the URL by '@' and get the second part
+
   return url.split("@")[1];
 }
-
-// Apply the function to each URL in the array
-
-// console.log(extractedWords);
 
 generateAllQrCodes();
