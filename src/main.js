@@ -1,5 +1,10 @@
-import { sum } from "./sum.js";
 
-console.log("sum is ", sum(10, 20));
-console.log("This is main.js.");
-console.log("You should probably use `yarn test` or `yarn test --watchAll`");
+var QRCode = require('qrcode');
+
+let qrCodeText = 'https://www.youtube.com/@codeorg';
+let filePath = 'pngfolder/myFileQR2.png';
+
+QRCode.toFile(filePath, qrCodeText, function (err) {
+  if (err) throw err;
+  console.log(`QR code saved to ${filePath}`);
+});
